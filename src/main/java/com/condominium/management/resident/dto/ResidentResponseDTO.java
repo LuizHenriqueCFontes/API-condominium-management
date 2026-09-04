@@ -6,6 +6,8 @@ public record ResidentResponseDTO(
 
         Long id,
 
+        Long userId,
+
         String name,
 
         String email,

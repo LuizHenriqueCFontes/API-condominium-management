@@ -124,6 +124,7 @@ public class ResidentService {
 
         return new ResidentResponseDTO(
                 resident.getId(),
+                resident.getUser().getId(),
                 resident.getUser().getName(),
                 resident.getUser().getEmail(),
                 resident.getCpf(),
