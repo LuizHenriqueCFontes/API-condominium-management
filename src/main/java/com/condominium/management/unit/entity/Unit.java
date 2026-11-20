@@ -6,6 +6,8 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 @Entity
 @Table(name = "units")
 @Getter
@@ -35,7 +37,8 @@ public class Unit {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "block_id", nullable = false)
     private Block block;
-
+    
+    @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime createdAt;
 }
